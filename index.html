@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracinha</title>
+    <script>
+        /*
+        Tudo que estiver em () sao parametros
+        Tudo que estiver em {} sao codigos
+        */
+
+        function acenderluz() {
+            document.getElementById("INTERRUPTOR").src="LAMPADA ACESA.jpg";
+        }
+        
+        function apagaluz() {
+            document.getElementById("INTERRUPTOR").src="LAMPADA APAGADA.jpg";
+        }
+    </script>
+</head>
+<body>
+    <h1>Interruptor</h1>
+
+    <img src="LAMPADA APAGADA.jpg" id="INTERRUPTOR" onmousemove="acenderluz()" onmouseout="apagaluz()">
+</body>
+</html>
