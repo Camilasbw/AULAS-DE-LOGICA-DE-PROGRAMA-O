@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros inteiros</title>
+
+    <!-- Efetuar a leitura de um valor inteiro positivo ou negativo e apresentar o número lido como sendo um valor positivo, ou seja, 
+     o programa deverá apresentar o módulo de um número fornecido. Utilize formulário para Entrada e/ou Saída-->
+
+    <script>
+        function calcularModulo() {
+            var n1 = parseFloat(document.getElementById("n1").value);
+
+            var resultado = Math.abs(n1);
+
+            document.getElementById("resultado").innerHTML = "O Numero positivo é " + resultado;
+        }
+        function limpar() {
+            document.getElementById("n1").value = "";
+            document.getElementById("resultado").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <h2>Numeros inteiros</h2>
+    <form onsubmit="calcularModulo(); return false;">
+        <label for="n1">Digite um número:</label>
+        <input type="number" step="any" id="n1" required>
+        <br><br>
+        <input type="button" value="Limpar" onclick="limpar()">
+    </form>
+
+    <p id="resultado"></p>
+</body>
+</html>

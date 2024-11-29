@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Escolar</title>
+    <script>
+        function calcularMedia() {
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            var nota3 = parseFloat(document.getElementById("nota3").value);
+            var nota4 = parseFloat(document.getElementById("nota4").value);
+            var media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+            var resultado = document.getElementById("resultado");
+
+            if (media >= 7) {
+                resultado.textContent = "Aprovado! Média: " + media.toFixed(2);
+            } else {
+                resultado.textContent = "Reprovado! Média: " + media.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Cálculo da Média Escolar</h1>
+    <form onsubmit="event.preventDefault(); calcularMedia();">
+        <label for="nota1">Digite a primeira nota:</label>
+        <input type="number" step="0.01" id="nota1" required>
+        <br><br>
+        <label for="nota2">Digite a segunda nota:</label>
+        <input type="number" step="0.01" id="nota2" required>
+        <br><br>
+        <label for="nota3">Digite a terceira nota:</label>
+        <input type="number" step="0.01" id="nota3" required>
+        <br><br>
+        <label for="nota4">Digite a quarta nota:</label>
+        <input type="number" step="0.01" id="nota4" required>
+        <br><br>
+        <input type="submit" value="Calcular Média">
+    </form>
+
+    <p id="resultado"></p>
+</body>
+</html>

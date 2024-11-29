@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Divisíveis por 2 e 3</title>
+
+    <!-- Efetuar a leitura de quatro número inteiros e apresentar os números que são divisíveis por 2 ou 3. -->
+    
+    <script>
+        function verificarDivisibilidade() {
+            var resultados = [];
+
+            var n1 = parseInt(document.getElementById("numero1").value);
+            if (n1 % 2 === 0 && n1 % 3 === 0) {
+                resultados.push(n1);
+            }
+
+            var n2 = parseInt(document.getElementById("numero2").value);
+            if (n2 % 2 === 0 && n2 % 3 === 0) {
+                resultados.push(n2);
+            }
+
+            var n3 = parseInt(document.getElementById("numero3").value);
+            if (n3 % 2 === 0 && n3 % 3 === 0) {
+                resultados.push(n3);
+            }
+
+            var n4 = parseInt(document.getElementById("numero4").value);
+            if (n4 % 2 === 0 && n4 % 3 === 0) {
+                resultados.push(n4);
+            }
+
+            var resultadoElemento = document.getElementById("resultado");
+
+            if (resultados.length > 0) {
+                resultadoElemento.textContent = "Os números que são divisíveis por 2 e 3 são: " + resultados.join(", ");
+            } else {
+                resultadoElemento.textContent = "Nenhum número é divisível por 2 e 3.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificar Números Divisíveis por 2 e 3</h1>
+    <form onsubmit="event.preventDefault(); verificarDivisibilidade();">
+        <label for="numero1">Digite o primeiro número:</label>
+        <input type="number" id="numero1" required>
+        <br><br>
+        <label for="numero2">Digite o segundo número:</label>
+        <input type="number" id="numero2" required>
+        <br><br>
+        <label for="numero3">Digite o terceiro número:</label>
+        <input type="number" id="numero3" required>
+        <br><br>
+        <label for="numero4">Digite o quarto número:</label>
+        <input type="number" id="numero4" required>
+        <br><br>
+        <input type="submit" value="Verificar Divisibilidade">
+    </form>
+
+    <p id="resultado"></p> 
+</body>
+</html>

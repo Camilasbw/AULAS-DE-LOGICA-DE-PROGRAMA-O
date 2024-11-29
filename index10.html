@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio de Lanchonete</title>
+
+    <!--Cardápio de uma lanchonete-->
+
+    <script>
+        function calcularPedido() {
+            var codigo = parseInt(document.getElementById("codigo").value);
+            var quantidade = parseInt(document.getElementById("quantidade").value);
+            var preco;
+
+            if (codigo === 100) {
+                preco = 1.20;
+            } else if (codigo === 101) {
+                preco = 1.30;
+            } else if (codigo === 102) {
+                preco = 1.50;
+            } else if (codigo === 103) {
+                preco = 1.20;
+            } else if (codigo === 104) {
+                preco = 1.30;
+            } else if (codigo === 105) {
+                preco = 1.00;
+            } else {
+                document.getElementById("resultado").textContent = "Código inválido! Por favor, digite um código entre 100 e 105.";
+                return;
+            }
+
+            var total = preco * quantidade;
+            document.getElementById("resultado").textContent = "O valor a ser pago pelo item é: R$ " + total.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular Pedido</h1>
+    <form onsubmit="event.preventDefault(); calcularPedido();">
+        <label for="codigo">Digite o código do item (100 a 105):</label>
+        <input type="number" id="codigo" required>
+        <br><br>
+        <label for="quantidade">Digite a quantidade:</label>
+        <input type="number" id="quantidade" required>
+        <br><br>
+        <input type="submit" value="Verificar Valor">
+    </form>
+
+    <p id="resultado"></p>
+</body>
+</html>

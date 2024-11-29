@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Maior e Menor Número</title>
+
+    <!--Efetuar a leitura de cinco números inteiros e identificar o maior e o menor valor. Não execute a ordenação de valores. Utilize formulário para Entrada e/ou Saída-->
+
+    <script>
+        function encontrarMaiorEMenor() {
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n2 = parseInt(document.getElementById("n2").value);
+            var n3 = parseInt(document.getElementById("n3").value);
+            var n4 = parseInt(document.getElementById("n4").value);
+            var n5 = parseInt(document.getElementById("n5").value);
+
+            var maior = n1;
+            var menor = n1;
+
+            if (n2 > maior) maior = n2;
+            if (n2 < menor) menor = n2;
+            if (n3 > maior) maior = n3;
+            if (n3 < menor) menor = n3;
+            if (n4 > maior) maior = n4;
+            if (n4 < menor) menor = n4;
+            if (n5 > maior) maior = n5;
+            if (n5 < menor) menor = n5;
+
+            document.getElementById("resultado").innerText = "O maior número é: " + maior +  "\n O menor número é: " + menor;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Encontrar Maior e Menor Número</h1>
+    <form onsubmit="event.preventDefault(); encontrarMaiorEMenor();">
+        <label for="n1">Digite o primeiro número:</label>
+        <input type="number" id="n1" required>
+        <br><br>
+        <label for="n2">Digite o segundo número:</label>
+        <input type="number" id="n2" required>
+        <br><br>
+        <label for="n3">Digite o terceiro número:</label>
+        <input type="number" id="n3" required>
+        <br><br>
+        <label for="n4">Digite o quarto número:</label>
+        <input type="number" id="n4" required>
+        <br><br>
+        <label for="n5">Digite o quinto número:</label>
+        <input type="number" id="n5" required>
+        <br><br>
+        <input type="submit" value="Encontrar Maior e Menor Número">
+    </form>
+    <p id="resultado"></p>
+</body>
+</html>
