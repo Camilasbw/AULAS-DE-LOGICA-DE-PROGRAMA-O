@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--Efetuar a leitura de um valor inteiro positivo ou negativo e apresentar o número lido como sendo um valor positivo, 
+ou seja, o programa deverá apresentar o módulo de um número fornecido. Utilize formulário para Entrada e/ou Saída.-->
+
+    <script>
+        function calcularDiferenca() {
+            var valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+            var valor2 = parseFloat(prompt("Digite o segundo valor:"));
+            var diferenca = Math.abs(valor1 - valor2);
+            alert("A diferença entre os valores é: " + diferenca);
+        }
+    </script>
+</head>
+<body onload="calcularDiferenca();">
+</body>
+</html>
+

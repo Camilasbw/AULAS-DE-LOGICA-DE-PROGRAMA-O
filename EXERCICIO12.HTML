@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--Salarios-->
+
+    <script>
+        function calcularAumento() {
+            var salario = parseFloat(prompt("Digite o salário do funcionário:"));
+            var cargo = prompt("Digite o código do cargo (101 - Engenheiro, 102 - Técnico, 103 - Gerente):");
+            var aumento;
+            var novoSalario;
+
+            if (cargo === '101') {
+                aumento = 0.10;
+            } else if (cargo === '102') {
+                aumento = 0.20;
+            } else if (cargo === '103') {
+                aumento = 0.30;
+            } else {
+                aumento = 0.40;
+            }
+
+            novoSalario = salario * (1 + aumento);
+            var diferenca = novoSalario - salario;
+
+            alert("Salário antigo: R$ " + salario + 
+                  "\nNovo salário: R$ " + novoSalario + 
+                  "\nDiferença: R$ " + diferenca);
+        }
+    </script>
+</head>
+<body onload="calcularAumento();">
+</body>
+</html>

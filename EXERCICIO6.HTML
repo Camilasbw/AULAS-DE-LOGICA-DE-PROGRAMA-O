@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área</title>
+    <title>Document</title>
+
+<!--Escreva um algoritmo que leia 3 números inteiros e mostre o maior deles. Utilize métodos de
+Entrada e/ou Saída.-->
 
     <script>
-        function calcularArea() {
-            var raio = Number(document.getElementById("txtRaio").value);
-            var area = 3.14159 * raio * raio;
-            document.getElementById("resultado").value = area;
+        function encontrarMaior() {
+            var n1 = parseInt(prompt("Digite o primeiro número:"));
+            var n2 = parseInt(prompt("Digite o segundo número:"));
+            var n3 = parseInt(prompt("Digite o terceiro número:"));
+
+            var maior;
+
+            if (n1 >= n2 && n1 >= n3) {
+                maior = n1;
+            } else if (n2 >= n1 && n2 >= n3) {
+                maior = n2;
+            } else {
+                maior = n3;
+            }
+
+            alert("O maior número é: " + maior);
         }
-        alert("programa que calcule a área da circunferência.");
     </script>
 </head>
-<body>
-
-    <label for="txtRaio">Raio :</label>
-    <input type="number" id="txtRaio">
-    <br><br>
-    <button onclick="calcularArea()">Calcular Área</button>
-    <br><br>
-    <label for="resultado">Área:</label>
-    <input type="text" id="resultado">
-
+<body onload="encontrarMaior();">
 </body>
 </html>

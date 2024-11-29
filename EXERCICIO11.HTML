@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resto da Divisão por 6</title>
+    <title>Document</title>
+
+<!--Cardápio de uma lanchonete-->
 
     <script>
-        function calcularResto() {
-            const numero = parseInt(document.getElementById('numero').value);
-            const resto = numero % 6;
-            document.getElementById('resultado').value = resto;
+        function calcularPedido() {
+            var codigo = parseInt(prompt("Digite o código do item (100 a 105):"));
+            var quantidade = parseInt(prompt("Digite a quantidade:"));
+            var preco;
+
+            if (codigo === 100) {
+                preco = 1.20;
+            } else if (codigo === 101) {
+                preco = 1.30;
+            } else if (codigo === 102) {
+                preco = 1.50;
+            } else if (codigo === 103) {
+                preco = 1.20;
+            } else if (codigo === 104) {
+                preco = 1.30;
+            } else if (codigo === 105) {
+                preco = 1.00;
+            } else {
+                alert("Código inválido! Por favor, digite um código entre 100 e 105.");
+                return;
+            }
+
+            var total = preco * quantidade;
+            alert("O valor a ser pago pelo item é: R$ " + total );
         }
-        alert("Programa que recebe um número e mostra o resto da divisão por 6.");
     </script>
 </head>
-<body>
-    <label for="numero">Digite um número:</label>
-    <input type="number" id="numero" required>
-    <button onclick="calcularResto()">Calcular</button>
-    <br><br>
-    <label for="resultado">O resto da divisão é:</label>
-    <input type="text" id="resultado">
+<body onload="calcularPedido();">
 </body>
 </html>

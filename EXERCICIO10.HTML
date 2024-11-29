@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Número ao quadrado</title>
+    <title>Document</title>
+
+<!--Elaborar um programa que efetue a leitura de um valor inteiro, e efetue a sua apresentação, caso o
+valor não seja maior que três. Utilize métodos de Entrada e/ou Saída.-->
 
     <script>
-        function calcularQuadrado() {
-            const numero = parseInt(document.getElementById('numero').value);
-            const quadrado = numero * numero;
-            document.getElementById('resultado').value = quadrado;
+        function verificarValor() {
+            var valor = parseInt(prompt("Digite um valor inteiro:"));
+
+            if (valor <= 3) {
+                alert("O valor digitado é: " + valor);
+            } else {
+                alert("O valor é maior que três e não será apresentado.");
+            }
         }
-        alert("Efetuar a leitura de um número inteiro e apresentar o resultado do quadrado desse número.");
     </script>
 </head>
-<body>
-
-    <label for="numero">Digite um número inteiro:</label>
-    <input type="number" id="numero">
-    <br><br>
-    <button onclick="calcularQuadrado()">Calcular Quadrado</button>
-    <br><br>
-    <label for="resultado">Numero ao quadrado:</label>
-    <input type="text" id="resultado">
+<body onload="verificarValor();">
 </body>
 </html>

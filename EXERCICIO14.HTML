@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--Ler dois valores numéricos e apresentar a diferença do maior para o menor. Utilize formulário para
+Entrada e/ou Saída.-->
+
+    <script>
+        function calcularDiferenca() {
+            var n1 = parseInt(document.getElementById("numero1").value);
+            var n2 = parseInt(document.getElementById("numero2").value);
+            var diferenca;
+
+            if (n1 > n2) {
+                diferenca = n1 - n2;
+            } else if (n2 > n1) {
+                diferenca = n2 - n1;
+            } else {
+                diferenca = 0;
+            }
+
+            alert("A diferença entre os dois números é: " + diferenca);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular Diferença entre Dois Números</h1>
+    <form onsubmit="event.preventDefault(); calcularDiferenca();">
+        <label for="numero1">Digite o primeiro número:</label>
+        <input type="number" id="numero1" required>
+        <br>
+        <label for="numero2">Digite o segundo número:</label>
+        <input type="number" id="numero2" required>
+        <br>
+        <input type="submit" value="Calcular Diferença">
+    </form>
+</body>
+</html>

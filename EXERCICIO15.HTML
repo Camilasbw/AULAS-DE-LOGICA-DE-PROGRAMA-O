@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--Ler quatros valores referentes a quatro notas escolares de um aluno e imprimir uma mensagemdizendo que 
+o aluno foi aprovado, se o valor da média escolar for maior ou igual a 7. Se o aluno não foiaprovado, indicar uma
+ mensagem informando esta condição. Apresentar junto das mensagens o valor damédia do aluno para qualquer condição. Utilize formulário para Entrada e/ou Saída.99. 
+Efetuar a leitura de quatro número inteiros e apresentar os números que são divisíveis por 2 e 3.Utilize formulário para Entrada e/ou Saída.-->
+
+    <script>
+        function calcularMedia() {
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            var nota3 = parseFloat(document.getElementById("nota3").value);
+            var nota4 = parseFloat(document.getElementById("nota4").value);
+            var media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+            if (media >= 7) {
+                alert("Aprovado! Média: " + media.toFixed(2));
+            } else {
+                alert("Reprovado! Média: " + media.toFixed(2));
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Cálculo da Média Escolar</h1>
+    <form onsubmit="event.preventDefault(); calcularMedia();">
+        <label for="nota1">Digite a primeira nota:</label>
+        <input type="number" step="0.01" id="nota1" required>
+        <br>
+        <label for="nota2">Digite a segunda nota:</label>
+        <input type="number" step="0.01" id="nota2" required>
+        <br>
+        <label for="nota3">Digite a terceira nota:</label>
+        <input type="number" step="0.01" id="nota3" required>
+        <br>
+        <label for="nota4">Digite a quarta nota:</label>
+        <input type="number" step="0.01" id="nota4" required>
+        <br>
+        <input type="submit" value="Calcular Média">
+    </form>
+</body>
+</html>

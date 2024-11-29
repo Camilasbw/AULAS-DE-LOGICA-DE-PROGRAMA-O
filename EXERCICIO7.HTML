@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculo de prestacao</title>
+    <title>Document</title>
+
+<!--Efetuar a leitura de cinco números inteiros e identificar o maior e o menor valor. Não execute a
+ordenação de valores. Utilize métodos de Entrada e/ou Saída.-->
 
     <script>
-        function calcularPrestacao() {
-            const valor = parseFloat(document.getElementById('valor').value);
-            const taxa = parseFloat(document.getElementById('taxa').value);
-            const tempo = parseFloat(document.getElementById('tempo').value);
+        function encontrarMaiorEMenor() {
+            var n1 = parseInt(prompt("Digite o primeiro número:"));
+            var n2 = parseInt(prompt("Digite o segundo número:"));
+            var n3 = parseInt(prompt("Digite o terceiro número:"));
+            var n4 = parseInt(prompt("Digite o quarto número:"));
+            var n5 = parseInt(prompt("Digite o quinto número:"));
 
-            const prestacao = valor + (valor * (taxa / 100) * tempo);
-            document.getElementById('resultado').value = prestacao;
+            var maior = n1;
+            var menor = n1;
+
+            if (n2 > maior) maior = n2;
+            if (n2 < menor) menor = n2;
+            if (n3 > maior) maior = n3;
+            if (n3 < menor) menor = n3;
+            if (n4 > maior) maior = n4;
+            if (n4 < menor) menor = n4;
+            if (n5 > maior) maior = n5;
+            if (n5 < menor) menor = n5;
+
+            alert("O maior número é: " + maior);
+            alert("O menor número é: " + menor);
         }
-        alert("cálculo e a apresentação do valor de uma prestação em atraso.");
     </script>
-
 </head>
-<body>
-    <label for="valor">Valor da Prestação:</label>
-    <input type="number" id="valor">
-    <br><br>
-    <label for="taxa">Taxa de Juros (%):</label>
-    <input type="number" id="taxa" >
-    <br><br>
-    <label for="tempo">Tempo em Meses:</label>
-    <input type="number" id="tempo">
-    <br><br>
-    <button onclick="calcularPrestacao()">Calcular Prestação em Atraso</button>
-    <br><br>
-    <label for="resultado">Atraso:</label>
-    <input type="text" id="resultado">
+<body onload="encontrarMaiorEMenor();">
 </body>
 </html>

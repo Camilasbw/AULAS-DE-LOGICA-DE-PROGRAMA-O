@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conversão temperatura</title>
-</head>
-<body>
-<script>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--Efetuar a leitura de um  1 valor inteiro positivo ou negativo e apresentar o número 
+lido como sendo um valor positivo, ou seja, o programa deverá apresentar o módulo de um número fornecido. Utilize métodos de Entrada e/ou Saída.-->
+<script>
+    function fnOrdenar(){
+        var n1;
  
-function Fahrenheit(){
-        var Grau_Celsius;
-        var mult;
-        Grau_Celsius = Number(document.getElementById("txtn1").value);
-        mult = (9 * Grau_Celsius + 160) /5;
-        document.getElementById("txtmult").value = mult;
+        var posicao1;
+        n1 = parseInt(prompt("Digite o seu numero: "));
+        if (n1 >= 0) {
+            posicao1 = n1;
+        } else {
+            (n1 < 0)
+            posicao1 = ((-n1 + -n1) + n1);
+        }
+ 
+        alert("Apresentação de um numero inteiro positivo   \n" +
+            "1º " + posicao1 + "\n" 
+        );
     }
-    alert("Algoritmo que le uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit")    
-</script>  
+</script>
 </head>
-<body>
-<form>
-    Grau_Celsius:
-<input  id="txtn1" type="text" size="10">
-<br><br>
-<input id="btnmult" type="button" value="Conversão" onclick="Fahrenheit();">
-<br><br>
-    Fahrenheit:
-<input  id="txtmult" type="txt" size="10">
-<input  type="submit" value="Limpar" size="10">
- 
-</form>
+<body onload="fnOrdenar()"; >
 </body>
 </html>

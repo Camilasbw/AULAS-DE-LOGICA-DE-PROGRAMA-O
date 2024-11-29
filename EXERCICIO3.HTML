@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversão temperatura</title>
-
-    <script>  
+    <title>Document</title>
+<!--Ler dois valores numéricos e apresentar a diferença do maior para o menor. Utilize métodos de
+    Entrada e/ou Saída.-->
+<script>
+    function fnOrdenar(){
+        var n1;
+        var n2;
  
-        function Grau_Celsius(){
-                var Fahrenheit;
-                var mult;
-                Fahrenheit = Number(document.getElementById("txtn1").value);
-                mult = (Fahrenheit -32) * (5/9);
-                document.getElementById("txtmult").value = mult;
-            }
-            alert("Algoritmo que leia uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius.")    
-        </script>  
+        var numero1;
+        var numero2;
+        n1 = parseInt(prompt("Digite o primero numero: "));
+        n2 = parseInt(prompt("Digite o segundo numero: "));
+        if (n1 > n2) {
+            numero1 = n1 - n2;
+        } else if (n2 > n1){
+            numero2 = n2 - n1;
+        }
+ 
+        alert("A diferença entre os dois Numeros é de: " + numero1 + "\n" 
+        );
+    }
+</script>
 </head>
-<body>
-
-<form>
-    Fahrenheit:
-    <input  id="txtn1" type="text" size="10">
-    <br><br>
-    <input id="btnmult" type="button" value="Conversão" onclick="Grau_Celsius();">
-    <br><br>
-    Grau_Celsius:
-    <input  id="txtmult" type="txt" size="10">
-    <input  type="submit" value="Limpar" size="10">
- 
-</form>
+<body onload="fnOrdenar()"; >
 </body>
 </html>

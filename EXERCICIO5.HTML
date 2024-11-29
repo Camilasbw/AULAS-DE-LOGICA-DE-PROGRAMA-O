@@ -1,34 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculo de idade</title>
+    <title>Document</title>
 
-    <script>
-        function calcularIdadeEmDias() {
-            var ano = Number(document.getElementById("txtn1").value);
-            var mes = Number(document.getElementById("txtn2").value);
-            var dia = Number(document.getElementById("txtn3").value);
-            
-            var idadeEmDias = (ano * 365) + (mes * 31) + dia;
-            document.getElementById("txtmult").value = idadeEmDias;
-        }
-        alert("algoritmo que leia a idade de uma pessoa expressa em ano, mês e dia e mostre-as em dias.");
-    </script>
+<!--Efetuar a leitura de quatro número inteiros e apresentar os números que são divisíveis por 2 e 3. Utilize
+métodos de Entrada e/ou Saída.-->
+
+<script>
+  function fnOrdenar(){
+            var n1;
+            var n2;
+            var n3;
+            var n4;
+            var posicao1;
+            var posicao2;
+            var posicao3;
+            n1 = parseInt(prompt("Digite o primeiro número"));
+            n2 = parseInt(prompt("Digite o segundo número"));
+            n3 = parseInt(prompt("Digite o terceiro número"));
+            n4 = parseInt(prompt("Digite o quarto número"));
+
+            if((n1%2) == 0 &&(n1%3) == 0){
+                posicao1 = n1;
+            }else{
+                posicao1 = 0;
+            }
+            if((n2 % 2) == 0 &&(n2 % 3) == 0){
+                posicao2 = n2;
+            }else{
+                posicao2 = 0;
+            }
+            if((n3 % 2) == 0 &&(n3 % 3) == 0){
+                posicao3 = n3;
+            }else{
+                posicao3 = 0;
+            }
+            if((n4 % 2) == 0 &&(n4 % 3) == 0){
+                posicao4 = n4;
+            }else{
+                posicao4 = 0;
+            }
+            alert("os números que são divisíveis por 2 e 3 sao =" + posicao1+ '\n'+  posicao2+'\n'+posicao3+'\n'+posicao4
+            );
+}
+</script>
 </head>
-<body>
-    
-    <label for="txtn1">Anos:</label>
-    <input type="number" id="txtn1" required><br><br>
-    <label for="txtn2">Mes:</label>
-    <input type="number" id="txtn2" required><br><br>
-    <label for="txtn3">Dia:</label>
-    <input type="number" id="txtn3" required><br><br>
-    
-    <button onclick="calcularIdadeEmDias()">Calcular Idade em Dias</button><br><br>
-    
-    <label for="txtmult">Idade em Dias:</label>
-    <input type="text" id="txtmult" readonly>
+<body onload="fnOrdenar()";>
 </body>
 </html>
