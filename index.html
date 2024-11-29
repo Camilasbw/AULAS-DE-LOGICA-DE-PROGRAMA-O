@@ -3,107 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revisão 04/10</title>
-    <style>
-        /* Estilos do corpo */
-        body {
-            background-color: white;
-            background-image: linear-gradient(to bottom, white, green);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: small;
-            color: pink;
-            font-weight: bolder; /* Negrito */
-            margin: 0; /* Remove margens padrão */
-            padding: 0; /* Remove preenchimento padrão */
-        }
-
-        /* Estilos do cabeçalho */
-        header {
-            text-align: center; /* Centraliza o texto no cabeçalho */
-            padding: 20px; /* Espaçamento no cabeçalho */
-        }
-
-        header > h1 {
-            margin: 0; /* Remove margens do título */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra do texto */
-        }
-
-        /* Estilos de navegação */
-        nav > ul {
-            list-style-type: none; /* Remove marcadores da lista */
-            padding: 0; /* Remove preenchimento padrão da lista */
-        }
-
-        nav > ul > li {
-            display: inline; /* Exibe os itens da lista em linha */
-            margin-right: 15px; /* Espaçamento entre os itens */
-        }
-
-        /* Estilo do link ao passar o mouse */
-        a {
-            color: pink; /* Cor do link */
-            text-decoration: none; /* Remove sublinhado */
-        }
-
-        a:hover {
-            color: white; /* Cor do link ao passar o mouse */
-            text-decoration: underline; /* Sublinhado ao passar o mouse */
-        }
-
-        /* Estilos do conteúdo principal */
-        main {
-            padding: 20px; /* Espaçamento no conteúdo principal */
-            text-align: left; /* Alinhamento do texto */
-        }
-
-        h1.T {
-            color: green; /* Cor do título da classe T */
-        }
-
-        aside {
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
-            padding: 10px; /* Espaçamento interno */
-            margin-top: 10px; /* Espaçamento acima do aside */
-        }
-
-        /* Estilos do rodapé */
-        footer {
-            text-align: center; /* Centraliza o texto no rodapé */
-            padding: 10px; /* Espaçamento no rodapé */
-            background-color: lightgrey; /* Cor de fundo do rodapé */
-            position: relative; /* Posição relativa */
-            bottom: 0; /* Alinha ao fundo */
-            width: 100%; /* Largura total */
-        }
-    </style>
+    <title>atividade 1</title>
 </head>
 <body>
-    <header>
-        <h1>Revisão de Conteúdo</h1>
-        <nav>
-            <ul> 
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1 class="T">1 ao 6</h1>
-        <article>
-            <p>Este é um exemplo de conteúdo. Aqui você pode colocar suas informações.</p>
-            <aside>
-                <p>Este conteúdo foi escrito por Camila.</p>
-            </aside>
-        </article>
-        <label for="nome">Nome:</label>
-        <input type="text" placeholder="Digite seu Nome" name="nome" id="nome">
-        <br><br>
-        <label for="email">E-mail:</label>
-        <input type="email" placeholder="Digite seu E-mail" name="email" id="S">
-    </main>
-    <footer>
-        <p>2024 - Camila</p>
-    </footer>
+    <!--
+
+    0! = 1
+    1! = 1
+    2! = 2 * 1
+    3! = 3 * 2 * 1
+    4! = 4 * 3 * 2 * 1
+    -->
+
+    <script>
+        var i;
+        var x;
+        var r;
+        i = 1;
+
+        while (i <= 5){
+            N1 = number(prompt("Digite um numero"));
+            x = i * 3;
+            r = x;
+            alert("O resultado de conta é:"+ r);
+            i++;
+        }
+    </script>
 </body>
 </html>
