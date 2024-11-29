@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de idade</title>
+
+    <script>
+        function calcularIdadeEmDias() {
+            var ano = Number(document.getElementById("txtn1").value);
+            var mes = Number(document.getElementById("txtn2").value);
+            var dia = Number(document.getElementById("txtn3").value);
+            
+            var idadeEmDias = (ano * 365) + (mes * 31) + dia;
+            document.getElementById("txtmult").value = idadeEmDias;
+        }
+        alert("algoritmo que leia a idade de uma pessoa expressa em ano, mês e dia e mostre-as em dias.");
+    </script>
+</head>
+<body>
+    
+    <label for="txtn1">Anos:</label>
+    <input type="number" id="txtn1" required><br><br>
+    <label for="txtn2">Mes:</label>
+    <input type="number" id="txtn2" required><br><br>
+    <label for="txtn3">Dia:</label>
+    <input type="number" id="txtn3" required><br><br>
+    
+    <button onclick="calcularIdadeEmDias()">Calcular Idade em Dias</button><br><br>
+    
+    <label for="txtmult">Idade em Dias:</label>
+    <input type="text" id="txtmult" readonly>
+</body>
+</html>

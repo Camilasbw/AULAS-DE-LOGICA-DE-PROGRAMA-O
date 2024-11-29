@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número ao quadrado</title>
+
+    <script>
+        function calcularQuadrado() {
+            const numero = parseInt(document.getElementById('numero').value);
+            const quadrado = numero * numero;
+            document.getElementById('resultado').value = quadrado;
+        }
+        alert("Efetuar a leitura de um número inteiro e apresentar o resultado do quadrado desse número.");
+    </script>
+</head>
+<body>
+
+    <label for="numero">Digite um número inteiro:</label>
+    <input type="number" id="numero">
+    <br><br>
+    <button onclick="calcularQuadrado()">Calcular Quadrado</button>
+    <br><br>
+    <label for="resultado">Numero ao quadrado:</label>
+    <input type="text" id="resultado">
+</body>
+</html>

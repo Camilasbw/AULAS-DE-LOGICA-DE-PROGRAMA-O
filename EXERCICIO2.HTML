@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversão temperatura</title>
+</head>
+<body>
+<script>  
+ 
+function Fahrenheit(){
+        var Grau_Celsius;
+        var mult;
+        Grau_Celsius = Number(document.getElementById("txtn1").value);
+        mult = (9 * Grau_Celsius + 160) /5;
+        document.getElementById("txtmult").value = mult;
+    }
+    alert("Algoritmo que le uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit")    
+</script>  
+</head>
+<body>
+<form>
+    Grau_Celsius:
+<input  id="txtn1" type="text" size="10">
+<br><br>
+<input id="btnmult" type="button" value="Conversão" onclick="Fahrenheit();">
+<br><br>
+    Fahrenheit:
+<input  id="txtmult" type="txt" size="10">
+<input  type="submit" value="Limpar" size="10">
+ 
+</form>
+</body>
+</html>

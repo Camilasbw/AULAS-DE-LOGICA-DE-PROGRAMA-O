@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Dólar</title>
+
+    <script>
+        function converterDolares() {
+            const cotacao = parseFloat(document.getElementById('cotacao').value);
+            const quantidade = parseFloat(document.getElementById('quantidade').value);
+            const valorEmReais = cotacao * quantidade;
+            document.getElementById('resultado').value = valorEmReais;
+        }
+        alert("Programa que efetue a apresentação do valor da conversão em real de um valor lido em dólar.");
+    </script>
+
+</head>
+<body>
+    <label for="cotacao">Cotação do Dólar:</label>
+    <input type="number" id="cotacao" placeholder="Digite o valor do dolar">
+    <br><br>
+    <label for="quantidade">Quantidade de Dólares:</label>
+    <input type="number" id="quantidade">
+    <br><br>
+    <button onclick="converterDolares()">Converter</button>
+    <br><br>
+    <label for="resultado">Conversão em Reais:</label>
+    <input type="text" id="resultado">
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de prestacao</title>
+
+    <script>
+        function calcularPrestacao() {
+            const valor = parseFloat(document.getElementById('valor').value);
+            const taxa = parseFloat(document.getElementById('taxa').value);
+            const tempo = parseFloat(document.getElementById('tempo').value);
+
+            const prestacao = valor + (valor * (taxa / 100) * tempo);
+            document.getElementById('resultado').value = prestacao;
+        }
+        alert("cálculo e a apresentação do valor de uma prestação em atraso.");
+    </script>
+
+</head>
+<body>
+    <label for="valor">Valor da Prestação:</label>
+    <input type="number" id="valor">
+    <br><br>
+    <label for="taxa">Taxa de Juros (%):</label>
+    <input type="number" id="taxa" >
+    <br><br>
+    <label for="tempo">Tempo em Meses:</label>
+    <input type="number" id="tempo">
+    <br><br>
+    <button onclick="calcularPrestacao()">Calcular Prestação em Atraso</button>
+    <br><br>
+    <label for="resultado">Atraso:</label>
+    <input type="text" id="resultado">
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resto da Divisão por 6</title>
+
+    <script>
+        function calcularResto() {
+            const numero = parseInt(document.getElementById('numero').value);
+            const resto = numero % 6;
+            document.getElementById('resultado').value = resto;
+        }
+        alert("Programa que recebe um número e mostra o resto da divisão por 6.");
+    </script>
+</head>
+<body>
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero" required>
+    <button onclick="calcularResto()">Calcular</button>
+    <br><br>
+    <label for="resultado">O resto da divisão é:</label>
+    <input type="text" id="resultado">
+</body>
+</html>

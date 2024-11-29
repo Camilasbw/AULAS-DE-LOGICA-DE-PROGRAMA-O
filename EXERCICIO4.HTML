@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume</title>
+
+    <script>
+        function Volume() {
+            var raio = Number(document.getElementById("txtn1").value);
+            var altura = Number(document.getElementById("txtn2").value);
+            var volume = 3.14159 * raio * altura;
+            document.getElementById("txtmult").value = volume;
+        }
+        alert("Calcular e apresentar o valor do volume de uma lata de óleo");
+    </script>
+</head>
+<body>
+    
+    <label for="txtn1">Raio (em cm):</label>
+    <input type="number" id="txtn1" required><br>
+    <br><br>
+    <label for="txtn2">Altura (em cm):</label>
+
+<input type="number" id="txtn2" required><br><br>
+    <button onclick="Volume()">Calcular Volume</button><br>
+    <label for="txtmult">Volume:</label>
+      
+<input type="text" id="txtmult" readonly>
+
+</body>
+</html>
+</html>
